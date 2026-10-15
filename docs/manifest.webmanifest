@@ -1,0 +1,13 @@
+{
+  "name": "مستشفى إيوان للطب النفسي وعلاج الإدمان",
+  "short_name": "إيوان",
+  "description": "بوابة المرضى والأطباء والحجوزات لمستشفى إيوان",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f8f7",
+  "theme_color": "#0f766e",
+  "icons": [{"src":"/app-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
