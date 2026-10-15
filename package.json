@@ -1,6 +1,6 @@
 {
   "name": "ewan-hospital-local-web",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "private": true,
   "description": "Ewan Hospital clean-start local test PWA",
   "scripts": {

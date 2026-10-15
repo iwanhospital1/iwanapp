@@ -70,3 +70,10 @@ This ZIP contains one local bootstrap administrator so the local app can be open
 Change this password immediately after sign-in and do not reuse it elsewhere. The local `data/db.json` is excluded from Git by `.gitignore`; do not commit it. The app is still a local JSON prototype and is **not connected to Supabase yet**. Uploading this repository to GitHub does not deploy a working cloud backend.
 
 For a future empty installation, `npm run create-admin` now uses Node's readline API and writes atomically to the same `DATA_DIR` used by the server.
+
+
+## v0.7.2 visual update
+- Centered page headings, forms, dashboard content, and tables.
+- Replaced the desktop side navigation with an app-style fixed bottom icon navigation across screen sizes.
+- Navigation items remain role-filtered and horizontally scrollable when there are more items than fit on screen.
+- This is a UI update only; it does not make GitHub Pages run the Node.js backend or connect Supabase automatically.

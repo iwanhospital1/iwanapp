@@ -41,3 +41,61 @@ body:has(#loginView:not(.hidden)) #registerForm input,body:has(#loginView:not(.h
 
 /* v0.6: weekly schedule and password reset polish */
 .schedule-panel .panel-heading{align-items:center}.schedule-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#e2f6f8;color:#0b669b;font-size:25px}.schedule-panel input[type=time],.schedule-panel select{min-width:115px;border:1px solid var(--line);border-radius:10px;padding:9px;background:#f8fcfd;color:var(--ink)}.schedule-panel input[type=checkbox]{width:19px;height:19px;accent-color:#0b669b}.password-reset-row{display:flex;gap:12px;align-items:end;margin-top:15px;padding-top:14px;border-top:1px solid var(--line)}.password-reset-row label{display:grid;gap:7px;flex:1;font-size:12px;font-weight:700}.password-reset-row input{padding:10px;border:1px solid var(--line);border-radius:10px;min-width:0}@media(max-width:600px){.password-reset-row{flex-direction:column;align-items:stretch}.schedule-panel .table-wrap{margin:0 -5px}.schedule-panel table{min-width:620px}}
+
+/* v0.7.2 app-like centered layout: bottom navigation on desktop and mobile */
+:root{--teal:#0b669b;--teal-dark:#084f78;--ink:#15394f;--muted:#6f8794;--line:#dcebef;--bg:#f3f9fb}
+html,body{min-height:100%;text-align:center}
+.app-shell{display:block;min-height:100vh;padding-bottom:94px}
+.sidebar{display:none!important}
+.main{width:100%;max-width:1600px;margin:0 auto;padding:26px clamp(16px,3vw,48px) 110px;min-width:0}
+.topbar{justify-content:center;flex-direction:column;text-align:center;gap:12px;margin-bottom:24px}
+.topbar>div:first-child{width:100%;text-align:center}
+.topbar h1{text-align:center}
+.user-area{justify-content:center;flex-wrap:wrap}
+#contentView{width:100%}
+#pageContent{width:100%;max-width:1400px;margin:0 auto;text-align:center}
+.panel,.stat,.notice,.toast,.doctor-card,.quick-action,.video-box{ text-align:center }
+.panel-heading{justify-content:center;flex-wrap:wrap;text-align:center}
+.panel-heading>div{text-align:center}
+.stats{max-width:1400px;margin-left:auto;margin-right:auto}
+.content-grid{max-width:1400px;margin:0 auto}
+.quick-actions{justify-items:stretch}
+.quick-action{justify-content:center;text-align:center}
+.quick-action>div:last-child{text-align:center}
+.form-grid{text-align:center}
+.form-grid label,.login-card label{text-align:center}
+input,select,textarea{ text-align:center }
+.table-wrap th,.table-wrap td,table{text-align:center}
+.doctor-card{justify-content:center;flex-wrap:wrap}
+.toolbar{justify-content:center}
+.empty{text-align:center}
+.mobile-nav{position:fixed;z-index:100;bottom:0;left:0;right:0;display:flex!important;align-items:stretch;justify-content:flex-start;gap:6px;overflow-x:auto;overflow-y:hidden;background:rgba(255,255,255,.96);backdrop-filter:blur(18px);border-top:1px solid #d8e9ee;padding:9px 10px calc(9px + env(safe-area-inset-bottom));box-shadow:0 -8px 28px #15394f16;scrollbar-width:none}
+.mobile-nav::-webkit-scrollbar{display:none}
+.mobile-nav-item{flex:0 0 82px;min-width:72px;border:0;background:transparent;color:#6f8794;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:7px 5px;border-radius:16px;transition:background .2s,color .2s,transform .2s}
+.mobile-nav-item span{width:32px;height:32px;border-radius:11px;background:#edf5f7;display:grid;place-items:center;font-size:18px;line-height:1;color:#47758a}
+.mobile-nav-item small{font-size:10px;white-space:nowrap;line-height:1.2}
+.mobile-nav-item.active{background:#e8f5f7;color:var(--teal);font-weight:800}
+.mobile-nav-item.active span{background:linear-gradient(135deg,#0b669b,#0d8b91);color:white;box-shadow:0 4px 10px #0b669b30}
+.mobile-nav-item:active{transform:scale(.96)}
+body:has(#loginView:not(.hidden)) .mobile-nav{display:none!important}
+body:has(#loginView:not(.hidden)) .main{padding-bottom:20px}
+body:has(#loginView:not(.hidden)) .login-layout{width:100%;max-width:480px;margin:0 auto;align-items:center}
+.login-brand,.login-card,.form-grid{text-align:center}
+.login-card label{width:100%}
+.login-card input,.form-grid input,.form-grid select{ text-align:center }
+footer{text-align:center}
+@media(max-width:760px){
+ .app-shell{display:block;padding-bottom:88px}
+ .main{padding:17px 12px 100px}
+ .topbar{align-items:center;margin-bottom:17px}
+ .topbar h1{font-size:21px}
+ .user-area{justify-content:center}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .content-grid{grid-template-columns:1fr}
+ .panel{padding:17px}
+ .mobile-nav-item{flex-basis:72px;min-width:68px}
+ .mobile-nav-item small{font-size:9px}
+ .form-grid{grid-template-columns:1fr}
+ .form-grid .span2{grid-column:auto}
+ .table-wrap{max-width:100%}
+}
