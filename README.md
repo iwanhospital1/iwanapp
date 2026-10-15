@@ -77,3 +77,7 @@ For a future empty installation, `npm run create-admin` now uses Node's readline
 - Replaced the desktop side navigation with an app-style fixed bottom icon navigation across screen sizes.
 - Navigation items remain role-filtered and horizontally scrollable when there are more items than fit on screen.
 - This is a UI update only; it does not make GitHub Pages run the Node.js backend or connect Supabase automatically.
+
+
+## GitHub Pages + Supabase integration bundle
+See `README-SUPABASE-AR.txt` for the deployment checklist, username-login Edge Function, SQL migration, and current feature limitations. The deployable frontend is in `docs/`. Do not put any Supabase secret/service-role key in frontend files.
