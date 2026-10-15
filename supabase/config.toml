@@ -1,0 +1,4 @@
+# username-login accepts the public publishable key from the browser and performs
+# credential verification internally. It must not require a user JWT at gateway level.
+[functions.username-login]
+verify_jwt = false
