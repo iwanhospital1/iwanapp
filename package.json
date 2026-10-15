@@ -1,0 +1,14 @@
+{
+  "name": "ewan-hospital-local-web",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Ewan Hospital clean-start local test PWA",
+  "scripts": {
+    "start": "node server.js",
+    "test:smoke": "node tests/smoke-test.js",
+    "create-admin": "node scripts/create-admin.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

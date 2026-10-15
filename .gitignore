@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+npm-debug.log*
+# Local database and uploaded test data must never be committed
+data/db.json
+# Backup exports contain sensitive patient and account information
+backups/
+ewan-backup-*.json
+*.backup.json
